@@ -1,7 +1,7 @@
 #/usr/bin/python
 import sys
 
-magic = "qNaPQsw"
+magic = "qSxWQpAN"
 salt = f"$6${magic}"
 
 try:
@@ -18,7 +18,8 @@ except ImportError:
     crypt = _crypt.crypt
 
 def gen_enable_pwd(serial):
-    return f"${crypt(serial, salt).split('$')[-1]}$"
+    hash = crypt(serial, salt);
+    return f"{hash.split('$')[-1]}{hash.split('$')[2][-1]}"
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:

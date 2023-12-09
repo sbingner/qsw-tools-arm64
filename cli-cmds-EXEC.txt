@@ -1,4 +1,5 @@
-Switch#    ?           
+Switch# ?
+
 
 Clear                               internal debug logs 
 Disable                             debug option for LOOP PROTECTION module 
@@ -7,14 +8,16 @@ Displays                            LOOP PROTECTION global configuration /
                                     global configuration 
 LuaCli                              Goes to Lua Cli shell 
 archive                             Downloads image using TFTP/SFTP
-clear                               Clears MC-LAG periodic and event update
-                                    counters 
+clear                               Clears the configurations
 cli                                 Configures CLI
 clock                               Manages the system clock
 config-restore                      Configures the restore option
 configure                           Configures the terminal
 copy                                Copies the configuration or system logs
 debug                               Configures trace for LOOP PROTECTION 
+debug-redundancy                    Configures debug redundancy related
+                                    information 
+default                             Configures default information 
 disable                             Disables a feature
 dump                                Display memory content from the given
                                     memory location 

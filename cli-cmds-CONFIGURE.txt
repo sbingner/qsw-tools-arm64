@@ -1,4 +1,5 @@
-Switch(config)#    ?   
+Switch(config)# ?
+
 
 Clear                               LOOP PROTECTION status / reset to default
                                     value 
@@ -13,35 +14,43 @@ auto-save                           Configures auto save trigger function
 automatic-port-create               Configures automatic port create feature 
 base                                Configures base bridge mode 
 base-mac                            Configures base MAC address for switch 
+bridge-mode                         Configures bridge mode related information
 channel-protocol                    Configures Link Aggregation 
 class-map                           Configures class map related information 
 clear                               Clears the specified parameters
 clock                               Configures clock related information
 cmdbuffs                            Configures syslog buffers related
                                     information 
-cpu                                 cpu rate configuration for a CPU 
 d-lag                               Configures Active-Active DLAG related
                                     parameters 
+dcs                                 DCS related configuration 
 debug                               Configures trace for the protocol 
 debug-logging                       Configures debug logs 
 default                             Configures default information 
 default-value                       Configures default-value save function 
 disable                             Disables a feature 
 domain                              Domain related information
+dot1x-tunnel-address                DOT1x tunnel address related configuration
 dump                                Configures dump information 
-egress                              Egress PCL configuration 
+ecfm-tunnel-address                 ECFM tunnel address related configuration
+elmi-tunnel-address                 ELMI tunnel address related configuration
 enable                              Enables a feature 
 enableuser                          Releases blocked user
 end                                 Exit to the privileged Exec (#) mode 
+eoam-tunnel-address                 EOAM tunnel address related configuration
 exit                                Exit to the privileged Exec mode 
 exituser                            Releases active user
 export                              Configures redistribution details 
 feature                             Configures a feature 
 force                               forcefully reconfigures the as-num and
                                     router-id 
+gmrp-tunnel-address                 GMRP tunnel address related configuration
+gvrp-tunnel-address                 GVRP tunnel address related configuration
 help                                Displays help for the command 
 hostname                            Configures the switch name 
 hwconsole                           enables to access hardware console 
+igmp-tunnel-address                 Configures IGMP tunnel address related
+                                    information
 incremental-save                    Configures incremental save and restore
                                     feature 
 interface                           Configures interface related information 
@@ -49,10 +58,16 @@ internal-lan                        Configures I-LAN interface
 ip                                  Configure ip access-list related
                                     information
 ipv4                                Configures IPv4 related information 
+l2protocol-tunnel                   Configures l2protocol tunnel related
+                                    information
 lacp                                Configures LACP related parameters 
+lacp-tunnel-address                 LACP tunnel address related configuration
 layer4                              Configures layer 4 related details 
 line                                Configures line information
 lldp                                Configures LLDP related information 
+lldp-tunnel-address                 LLDP tunnel address related configuration
+load-balance                        Load balancing policy related
+                                    configuration 
 logging                             Configures Syslog server related
                                     information 
 logging-file                        Configures logging file related
@@ -63,7 +78,6 @@ login                               Configures login details
 mac                                 Configures MAC address table 
 mac-address-table                   Configures MAC address table 
 mac-learn-rate                      Configures MAC learning rate 
-mac-vlan                            Enables MAC based VLAN 
 mail-server                         Configures mail server related information
 map                                 Configures mapping entry 
 maximum-paths                       Configures maximum number of multipaths 
@@ -74,6 +88,8 @@ mirror                              Configures the mirroring parameters
 mls                                 Configures multilayer security enabled QoS
 monitor                             Configures monitoring details 
 mst                                 Multiple Spanning Tree configuration 
+multicast-mac                       Configures multicast mac address related
+                                    information
 mvr                                 Enables multicast VLAN feature 
 no                                  Deletes the entry
 packet                              packet send or receive 
@@ -85,6 +101,8 @@ port-security                       Configure port-security related
 priority-map                        Configures priority map related
                                     information 
 protocol-vlan                       Enables protocol-VLAN based classification
+provider-bridge                     Configures provider bridge related
+                                    information
 qos                                 Configures QoS related information 
 qos-egress-dot1p-profile            Configures QOS Egress DOT1P Profile 
 qos-egress-exp-dot1p-profile        Configures Egress MPLS Experimental DOT1P
@@ -96,16 +114,12 @@ qos-ingress-dscp-profile            Configures DSCP Ingress profile
 qos-ingress-exp-profile             Configures QOS Ingress Exp Profile 
 queue                               Configures queue related information 
 queue-map                           Configures queue map related information 
-queue-type                          Configures queue template type related
-                                    information 
 redistribute-policy                 Configures redistribution policy
                                     information 
 rmon                                Configures RMON related parameters
 rmon2                               Configures RMONv2 related details 
 rollback                            Configures rollback function 
 router-id                           Configures router ID related information 
-sched-hierarchy                     Configures scheduler hierarchy related
-                                    information 
 scheduler                           Configures scheduler related information 
 security                            Configures Security details 
 security-bridging                   Configures Security details for Bridged
@@ -125,7 +139,7 @@ snmpwalk                            Performs walk opertion for mib object
 snooping                            Configures snooping related parameters 
 sntp                                Enters SNTP configuration mode
 spanning-tree                       Configures spanning tree related protocol 
-subnet-vlan                         Enables subnet-VLAN based classification 
+stp-tunnel-address                  STP tunnel address related configuration
 switch                              Configures switch related details
 switching-mode                      Switching-mode related configuration 
 syslog                              Configures syslog related information 
@@ -141,5 +155,3 @@ username                            Configures username related configuration
 vlan                                Configures VLAN related information 
 vrf                                 VRF related information
 web-session                         configure value for web session 
-wildcard                            Configures wildcard VLAN entry 
-
