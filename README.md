@@ -17,7 +17,25 @@ To access enable mode:
 
 ## SSH Access
 
-You can enable ssh from the normal admin shell via `ssh enable` then login as `debug` with the generated password above to get a root shell
+You can enable ssh from the normal admin shell via `ssh enable` then login as `debug` with the generated password above to get a root shell.  This is handled via `pam_debugauth.so`; if you don't like this, we can:
+
+1. Edit `/etc/pam.d/sshd` to contain (based on https://github.com/openwrt/packages/blob/master/net/openssh/files/sshd.pam):
+```
+auth       required     pam_env.so
+auth       include      common-auth
+account    required     pam_nologin.so
+account    include      common-account
+session    include      common-session
+session    optional     pam_motd.so
+session    optional     pam_mail.so standard noenv
+session    required     pam_limits.so
+password   include      common-password
+```
+2. Modify root's shell in /etc/passwd to be `/bin/ash`
+```
+root:x:0:0:root:/root:/bin/ash
+```
+3. Set a root passord via `passwd root`
 
 ## Decrypting firmware
 
