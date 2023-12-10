@@ -17,7 +17,7 @@ To access enable mode:
 
 ## SSH Access
 
-It allows you to enable SSH, but I have not yet determined how to actually get the thing to allow me to log in to it.  It simply says all logins are unauthorized.
+You can enable ssh from the normal admin shell via `ssh enable` then login as `debug` with the generated password above to get a root shell
 
 ## Decrypting firmware
 
