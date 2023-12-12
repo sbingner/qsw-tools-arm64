@@ -48,7 +48,7 @@ Without opening the firewall, the best way that I found was to ssh to the switch
 
 ## Decrypting firmware
 
-TBD: There is no firmware for the QSW-M3216 available to download yet.
+QNAP firmware images are plain tarballs, but every file other than the `fwver.json` contained within is encrypted. Use `decfile.sh` to decrypt them.
 
 ## Using a management VLAN other than 1
 
