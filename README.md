@@ -55,9 +55,8 @@ TBD: There is no firmware for the QSW-M3216 available to download yet.
 The CLI allows you to set IPs on more than one VLAN, but the firmware stupidly only sets the IP on the Linux TAP interface for interface "vlan1":
 
 ```c
-iVar1 = strcmp(local_10,"vlan1");
-if (iVar1 == 0) {
-    cpsstap_update_ip(*param_1,param_1[1]);
+if ( !strcmp(piIfName, "vlan1") ) {
+  cpsstap_update_ip(pIfaceParams->u4IpAddr, pIfaceParams->u4SubnetMask);
 }
 ```
 
