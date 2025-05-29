@@ -43,7 +43,7 @@ root:x:0:0:root:/root:/bin/ash
 ```
 3. Set a root passord via `passwd root`
 
-## Remove CLI access
+## Remote CLI access
 Without opening the firewall, the best way that I found was to ssh to the switch as above then run `telnet 127.0.0.1 6023`
 
 ## Decrypting firmware
