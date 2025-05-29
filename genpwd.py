@@ -1,8 +1,28 @@
 #/usr/bin/python
 import sys
 
-magic30 = "qSxWQpAN"
-magic40 = "NQxWSpqA"
+magic = "qSxWQpAN"
+
+def scrambleSalt(s, version):
+    salt = list(s)
+    if (version < 2):
+        return salt
+
+    size = len(salt)
+    src = 0
+    dest = size - 1
+    while (dest > src):
+        while size > src and (ord(salt[src]) & 1) == 0:
+            src += 1
+        while dest >= 0 and (ord(salt[dest]) & 1) == 0:
+            dest -= 1
+        salt[src], salt[dest] = salt[dest], salt[src]
+        dest -= 1
+        src += 1
+
+    salt[0], salt[size - 1] = salt[size - 1], salt[0]
+
+    return "".join(salt)
 
 try:
     from passlib.hash import sha512_crypt
@@ -24,9 +44,7 @@ def gen_enable_pwd(serial, salt):
 if __name__ == "__main__":
     if len(sys.argv) == 3 and sys.argv[1] == "-4":
         sys.argv.remove("-4")
-        magic = magic40
-    else:
-        magic = magic30
+        magic = scrambleSalt(magic, 2)
 
     salt = f"$6${magic}"
     if len(sys.argv) != 2:
