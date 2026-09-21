@@ -84,9 +84,10 @@ Note: With this trick, ping won't work, since that is handled at a lower layer a
 
 You can expose various services by commenting out stuff in `/etc/firewall.user` and then running `fw3`.
 
-* Port 6023: ISS console (same as serial, with auth)
+* Port 6022: dropbear SSH on firmware 4.5
+* Port 6023: ISS console (same as serial, with auth) - gone on firmware 4.5, replaced by ISS listening on port 22 for the same thing when SSH is enabled from GUI
 * Port 12345: Secret lua debug shell with low-level commands (no auth).
-* Port 12346: Some kind of file transfer protocol, like FTP but inline (try `ls` and `get configToLoad.txt`). It's a virtual FS though.
+* Port 12346: Some kind of file transfer protocol, like FTP but inline (try `ls` and `get configToLoad.txt`). It's a virtual FS though. - Also gone on 4.5
 
 Alternatively, use SSH forwarding (`ssh -L 6023:localhost:6023`) to tunnel the shell over SSH instead of just opening the ports.
 
